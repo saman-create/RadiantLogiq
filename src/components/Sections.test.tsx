@@ -40,6 +40,8 @@ describe('landing page story sections', () => {
     for (const ehr of ['Epic', 'Cerner', 'Athenahealth', 'DrChrono', 'Eligible', 'eClinicalWorks']) {
       expect(within(section).getByText(ehr)).toBeInTheDocument();
     }
+    const illustration = screen.getByLabelText('RadiantLogiq TeleHealth workflow illustration');
+    expect(illustration.querySelector('img.visual-logo')).toHaveAttribute('src', '/brand/riq-logo.jpg');
   });
 
   it('renders the full integration set as accessible brand logos instead of text placeholders', () => {

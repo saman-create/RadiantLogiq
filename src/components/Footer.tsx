@@ -25,7 +25,7 @@ export function Footer() {
       <div className="footer-top">
         <div className="footer-brand">
           <a className="wordmark wordmark-light" href="/" aria-label="RadiantLogiq home">
-            <img className="wordmark-logo" src="/brand/riq-logo.jpg" alt="" />
+            <img className="wordmark-logo" src="/brand/riq-logo-dark.png" alt="logo" />
             <span>RadiantLogiq</span>
           </a>
           <p>{siteContent.footer.description}</p>

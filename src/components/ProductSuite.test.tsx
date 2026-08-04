@@ -34,6 +34,14 @@ describe('ProductSuite', () => {
     expect(screen.getByRole('tabpanel', { name: 'RadiantLogiq MEDS' })).toHaveTextContent('Waitlist');
   });
 
+  it('uses the supplied RadiantLogiq logo inside every product illustration', () => {
+    render(<ProductSuite />);
+
+    const panel = screen.getByRole('tabpanel', { name: 'RadiantLogiq TeleHealth' });
+    const logo = panel.querySelector('img.visual-logo');
+    expect(logo).toHaveAttribute('src', '/brand/riq-logo.jpg');
+  });
+
   it('moves between product tabs with arrow keys', async () => {
     const user = userEvent.setup();
     render(<ProductSuite />);

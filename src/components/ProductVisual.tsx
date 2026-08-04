@@ -16,7 +16,7 @@ export function ProductVisual({ product }: { product: Product }) {
     <div className={`product-visual visual-${product.id}`} aria-hidden="true">
       <div className="visual-window">
         <div className="visual-sidebar">
-          <span className="visual-logo">R<span>Q</span></span>
+          <img className="visual-logo" src="/brand/riq-logo.jpg" alt="" />
           {[0, 1, 2, 3].map((item) => <i key={item} className={item === 0 ? 'active' : ''} />)}
         </div>
         <div className="visual-main">

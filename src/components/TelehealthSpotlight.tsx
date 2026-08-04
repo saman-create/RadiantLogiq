@@ -16,7 +16,7 @@ export function TelehealthSpotlight() {
 
         <div className="telehealth-visual" aria-label="RadiantLogiq TeleHealth workflow illustration">
           <div className="portal-rail" aria-hidden="true">
-            <span className="visual-logo">R<span>Q</span></span>
+            <img className="visual-logo" src="/brand/riq-logo.jpg" alt="" />
             <i className="active" /><i /><i /><i />
           </div>
           <div className="portal-panel portal-waitlist">
