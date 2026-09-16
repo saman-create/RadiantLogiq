@@ -10,8 +10,16 @@ import { Principles } from './components/Principles';
 import { ProductSuite } from './components/ProductSuite';
 import { TelehealthSpotlight } from './components/TelehealthSpotlight';
 import { installScrollMotion } from './motion';
+import { SitePage } from './pages/SitePage';
+import { normalizePath, routeTitles } from './routes';
 
 export default function App() {
+  const path = normalizePath(window.location.pathname);
+  document.title = `${routeTitles[path] || 'Page not found'} — RadiantLogiq`;
+  return path === '/' ? <LandingPage /> : <SitePage path={path} />;
+}
+
+function LandingPage() {
   const experienceRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {

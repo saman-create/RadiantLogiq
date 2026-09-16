@@ -3,4 +3,7 @@ dist/
 .vite/
 .playwright-cli/
 output/playwright/
+output/pages-review/
 *.tsbuildinfo
+.firebase/
+firebase-debug*.log

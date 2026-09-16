@@ -17,13 +17,14 @@ function Wordmark() {
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isOverHero, setIsOverHero] = useState(true);
+  const [isOverHero, setIsOverHero] = useState(window.location.pathname === '/');
   const [isHeroScrolled, setIsHeroScrolled] = useState(false);
 
   useEffect(() => {
     const syncHeaderSurface = () => {
       const hero = document.querySelector<HTMLElement>(".hero-immersive");
-      if (!hero || hero.offsetHeight === 0) return;
+      if (!hero) { setIsOverHero(false); return; }
+      if (hero.offsetHeight === 0) return;
       const overHero = window.scrollY < hero.offsetTop + hero.offsetHeight - 88;
       setIsOverHero(overHero);
       setIsHeroScrolled(window.scrollY > 24);
@@ -63,7 +64,7 @@ export function Header() {
         <nav className="desktop-nav" aria-label="Primary navigation">
           <div className="nav-links">
             {siteContent.navigation.map((item) => (
-              <a key={item.label} href={item.href}>
+              <a key={item.label} href={item.href === '#products' && window.location.pathname !== '/' ? '/#products' : item.href} aria-current={window.location.pathname.replace(/\/$/, '') === item.href ? 'page' : undefined}>
                 {item.label}
               </a>
             ))}
@@ -98,7 +99,7 @@ export function Header() {
         >
           <nav aria-label="Mobile menu">
             {siteContent.navigation.map((item) => (
-              <a key={item.label} href={item.href} onClick={closeMenu}>
+              <a key={item.label} href={item.href === '#products' && window.location.pathname !== '/' ? '/#products' : item.href} onClick={closeMenu}>
                 {item.label}
               </a>
             ))}

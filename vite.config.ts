@@ -1,12 +1,13 @@
-import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+import { siteRoutes } from "./build/siteRoutes.ts";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), siteRoutes()],
   test: {
-    environment: 'jsdom',
+    environment: "jsdom",
     globals: true,
-    setupFiles: './src/test/setup.ts',
+    setupFiles: "./src/test/setup.ts",
     css: true,
   },
 });

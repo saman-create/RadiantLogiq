@@ -95,7 +95,7 @@ describe("RadiantLogiq application shell", () => {
     expect(homeLinks).toHaveLength(2);
     for (const link of homeLinks) {
       const image = link.querySelector("img");
-      expect(image).toHaveAttribute("src", "/brand/riq-logo.jpg");
+      expect(image).toHaveAttribute("src", "/brand/riq-logo-dark.png");
       expect(image?.parentElement).toBe(link);
     }
   });
