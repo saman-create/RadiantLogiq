@@ -4,7 +4,7 @@ import { siteContent } from './content';
 describe('verified RadiantLogiq content contract', () => {
   it('keeps the three published business metrics', () => {
     expect(siteContent.metrics.map(({ value, label }) => [value, label])).toEqual([
-      ['10000+', 'Active clinicians'],
+      ['9 States', 'Active clinicians'],
       ['99.9%', 'Uptime SLA'],
       ['5', 'Enterprise platforms'],
     ]);

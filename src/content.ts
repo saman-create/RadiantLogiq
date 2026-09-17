@@ -26,7 +26,7 @@ export const siteContent = {
     secondaryCta: { label: 'Explore Platform', href: '#products' },
   },
   metrics: [
-    { value: '10000+', label: 'Active clinicians' },
+    { value: '9 States', label: 'Active clinicians' },
     { value: '99.9%', label: 'Uptime SLA' },
     { value: '5', label: 'Enterprise platforms' },
   ],
