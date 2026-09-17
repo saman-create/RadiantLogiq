@@ -136,7 +136,7 @@ export function PartnersPage() {
           <section className="partner-row" key={p.name}>
             <div className="partner-image">
               <img
-                src={`https://app.radiantlogiq.ai/assets/logos/${p.image}`}
+                src={`/partners/${p.image}`}
                 alt={p.name}
                 loading="lazy"
               />

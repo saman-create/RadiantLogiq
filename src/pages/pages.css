@@ -256,6 +256,7 @@
   max-width: 330px;
   height: 150px;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 .partner-directory {
   margin-top: 64px;
@@ -281,11 +282,11 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: white;
-  border-radius: 12px;
+  background: transparent;
   min-height: 116px;
 }
 .partner-image img {
+  display: block;
   max-width: 160px;
   width: 100%;
   max-height: 80px;

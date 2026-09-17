@@ -2,11 +2,23 @@ import { afterEach, expect, it } from "vitest";
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { ContactPage, LoginPage } from "./ContactPage";
-import { AboutPage } from "./CompanyPages";
+import { AboutPage, PartnersPage } from "./CompanyPages";
 
 afterEach(() => {
   cleanup();
   window.history.replaceState({}, "", "/");
+});
+
+it("includes the new pharmacy partners with local logos and official links", () => {
+  render(<PartnersPage />);
+  for (const [name, href] of [
+    ["Empower Pharmacy", "https://www.empowerpharmacy.com/"],
+    ["Olympia Pharmacy", "https://www.olympiapharmacy.com/"],
+  ]) {
+    const logo = screen.getByRole("img", { name });
+    expect(logo.getAttribute("src")).toMatch(/^\/partners\//);
+    expect(logo.closest("section")?.querySelector("a")).toHaveAttribute("href", href);
+  }
 });
 
 it("switches the full team biography rather than only the selected label", async () => {

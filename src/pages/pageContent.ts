@@ -153,7 +153,7 @@ export const vision = [
 export const partners = [
   {
     name: "Strive Pharmacy",
-    image: "strive-logo.png",
+    image: "strive.svg",
     description:
       "LegitScript-certified and NABP-accredited compounding pharmacy partner held to the gold standard in compliance.",
     href: "https://www.strivepharmacy.com/",
@@ -167,10 +167,22 @@ export const partners = [
   },
   {
     name: "Patriotic Virtual Telehealth",
-    image: "patriotic-logo.png",
+    image: "patriotic-transparent.png",
     description:
       "Exclusive clinical operations partner providing quality virtual care across the United States.",
     href: "https://patriotictelehealth.com",
+  },
+  {
+    name: "Empower Pharmacy",
+    image: "empower.webp",
+    description: "Compounding pharmacy and outsourcing facility serving providers, healthcare partners, and patients.",
+    href: "https://www.empowerpharmacy.com/",
+  },
+  {
+    name: "Olympia Pharmacy",
+    image: "olympia.svg",
+    description: "Compounding pharmacy and outsourcing facility providing medications for healthcare providers and patients.",
+    href: "https://www.olympiapharmacy.com/",
   },
 ];
 
