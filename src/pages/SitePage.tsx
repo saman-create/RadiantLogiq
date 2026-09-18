@@ -5,6 +5,7 @@ import { ContactPage, LoginPage } from "./ContactPage";
 import { ProductPage } from "./ProductPage";
 import { LegalPage, HipaaPage, SecurityPage } from "./TrustPages";
 import { NotFound } from "./NotFound";
+import { BlogArticlePage } from "./BlogArticlePage";
 import { isKnownRoute } from "../routes";
 import "./pages.css";
 
@@ -31,7 +32,9 @@ export function SitePage({ path }: { path: string }) {
       <Header />
       <main id="page-content" className="inner-main">
         <div className="page-container">
-          {path.startsWith("/products/") ? (
+          {path.startsWith("/blog/") ? (
+            <BlogArticlePage slug={path.slice(6)} />
+          ) : path.startsWith("/products/") ? (
             <ProductPage id={path.slice(10)} />
           ) : (
             pages[path]

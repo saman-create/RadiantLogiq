@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { PageIntro, PageLink, FeatureList } from "./Shared";
-import { partners, plans, posts, team, vision } from "./pageContent";
+import { partners, plans, team, vision } from "./pageContent";
+import { posts, blogDescription } from "./blogContent";
 
 export function PricingPage() {
   return (
@@ -165,7 +166,7 @@ export function BlogPage() {
     <>
       <PageIntro
         title="The Radiant Logiq Blog"
-        description="Insights from the intersection of AI, clinical operations, and radiology."
+        description={blogDescription}
       />
       <div className="blog-feed">
         {posts.map((post, i) => (
@@ -174,18 +175,22 @@ export function BlogPage() {
             key={post.title}
           >
             <img
-              src={`https://images.unsplash.com/${post.image}?auto=format&fit=crop&q=80&w=1000`}
-              alt=""
+              src={post.image}
+              alt={post.imageAlt}
               loading={i === 0 ? "eager" : "lazy"}
             />
             <div className="blog-story-body">
               <span className="story-category">{post.category}</span>
-              <h2>{post.title}</h2>
+              <h2><a className="story-title-link" href={`/blog/${post.slug}`}>{post.title}</a></h2>
               <p>{post.description}</p>
               <div className="story-byline">
                 <span>{post.date}</span>
                 <span>{post.author}</span>
+                <span>{post.readTime}</span>
               </div>
+              <a className="text-link story-read-link" href={`/blog/${post.slug}`} aria-label={`Read ${post.title}`}>
+                {i === 0 ? "Read the feature" : "Read article"} <ArrowUpRight size={18} aria-hidden="true" />
+              </a>
             </div>
           </article>
         ))}

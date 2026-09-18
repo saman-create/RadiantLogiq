@@ -186,35 +186,6 @@ export const partners = [
   },
 ];
 
-export const posts = [
-  {
-    title: "The Future of Teleradiology: AI-Driven Decision Support",
-    category: "Innovation",
-    description:
-      "How deterministic logic trees and AI inferencing are revolutionizing the way radiologists make critical decisions at the point of care.",
-    date: "May 24, 2024",
-    author: "Dr. Olalesi Osunsade",
-    image: "photo-1576091160550-217359f42f8c",
-  },
-  {
-    title: "Ensuring HIPAA Compliance in the Age of Teleradiology",
-    category: "Security",
-    description:
-      "The ultimate guide to maintaining rock-solid compliance when using zero-footprint web applications for radiology operations.",
-    date: "May 18, 2024",
-    author: "Compliance Team",
-    image: "photo-1550751827-4bd374c3f58b",
-  },
-  {
-    title: "Optimizing Radiologist Workflows with PowerScribe Companions",
-    category: "Workflow",
-    description:
-      "Deep-diving into the RadiantLogiq architecture and how it eliminates redundant documentation and reduces clinical burnout.",
-    date: "April 30, 2024",
-    author: "Product Team",
-    image: "photo-1516542077369-bc9345bc9714",
-  },
-];
 
 export const legalContent = {
   privacy: {

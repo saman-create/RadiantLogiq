@@ -55,6 +55,10 @@ it.each([
   "pricing/",
   "demo?product=cds",
   "products/ehr",
+  "blog/future-of-teleradiology",
+  "blog/trust-by-design",
+  "blog/connected-radiology-workflow",
+  "blog/images/future-teleradiology.png",
   "brand/riq-logo-dark.png",
 ])("serves the known route or asset %s in dev and preview", async (path) => {
   for (const base of [devUrl, previewUrl])
